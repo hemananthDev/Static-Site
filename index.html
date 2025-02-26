@@ -5,140 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A simple static website hosted on AWS S3 and deployed using GitHub Actions.">
     <title>My Static Website</title>
-    <style>
-        /* CSS Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f8;
-        }
-
-        header {
-            background-color: #0073e6;
-            color: white;
-            padding: 1rem;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        main {
-            padding: 2rem;
-        }
-
-        section {
-            margin-bottom: 2rem;
-        }
-
-        button {
-            padding: 0.8rem 1.5rem;
-            font-size: 1rem;
-            cursor: pointer;
-            background-color: #0073e6;
-            color: white;
-            border: none;
-            border-radius: 5px;
-        }
-
-        button:hover {
-            background-color: #005bb5;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        footer a {
-            color: #0073e6;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-
-            nav ul {
-                text-align: center;
-            }
-
-            nav ul li {
-                display: block;
-                margin-bottom: 10px;
-            }
-
-            main {
-                padding: 1rem;
-            }
-
-            footer {
-                padding: 1.5rem;
-            }
-        }
-
-        /* Skip Link Styles */
-        .skip-link {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background-color: #0073e6;
-            color: white;
-            padding: 10px;
-            text-decoration: none;
-            font-weight: bold;
-            z-index: 1000;
-        }
-
-        .skip-link:focus {
-            background-color: #005bb5;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Skip Link for Accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-
     <!-- Header Section -->
     <header>
         <h1>Welcome to My Static Website</h1>
-        <nav aria-label="Main navigation">
+        <nav>
             <ul>
-                <li><a href="#about" aria-label="About section">About</a></li>
-                <li><a href="#features" aria-label="Features section">Features</a></li>
-                <li><a href="#contact" aria-label="Contact section">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Main Content Section -->
-    <main id="main-content">
+    <main>
         <section id="about">
             <h2>About This Website</h2>
             <p>This site is hosted on <strong>AWS S3</strong> and deployed using <strong>GitHub Actions</strong>. It demonstrates a simple static website with basic interactivity.</p>
@@ -155,7 +38,7 @@
 
         <section id="interactive">
             <h2>Interactive Demo</h2>
-            <button onclick="showMessage()" aria-label="Click to display a message">Click Me</button>
+            <button onclick="showMessage()">Click Me</button>
             <p id="message"></p>
         </section>
     </main>
@@ -163,16 +46,11 @@
     <!-- Footer Section -->
     <footer id="contact">
         <h2>Contact</h2>
-        <p>Have questions? Reach out at <a href="mailto:example@example.com" aria-label="Send an email to example@example.com">example@example.com</a>.</p>
+        <p>Have questions? Reach out at <a href="mailto:example@example.com">example@example.com</a>.</p>
         <p>&copy; 2023 My Static Website. All rights reserved.</p>
     </footer>
 
     <!-- JavaScript -->
-    <script>
-        // JavaScript for interactive demo
-        function showMessage() {
-            document.getElementById('message').textContent = "Hello, welcome to my website!";
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
