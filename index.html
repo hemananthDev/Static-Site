@@ -8,20 +8,23 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Header Section -->
     <header>
         <h1>Welcome to My Static Website</h1>
-        <nav>
+        <nav aria-label="Main navigation">
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" aria-label="About section">About</a></li>
+                <li><a href="#features" aria-label="Features section">Features</a></li>
+                <li><a href="#contact" aria-label="Contact section">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Main Content Section -->
-    <main>
+    <main id="main-content">
         <section id="about">
             <h2>About This Website</h2>
             <p>This site is hosted on <strong>AWS S3</strong> and deployed using <strong>GitHub Actions</strong>. It demonstrates a simple static website with basic interactivity.</p>
@@ -38,7 +41,7 @@
 
         <section id="interactive">
             <h2>Interactive Demo</h2>
-            <button onclick="showMessage()">Click Me</button>
+            <button onclick="showMessage()" aria-label="Click to display a message">Click Me</button>
             <p id="message"></p>
         </section>
     </main>
@@ -46,7 +49,7 @@
     <!-- Footer Section -->
     <footer id="contact">
         <h2>Contact</h2>
-        <p>Have questions? Reach out at <a href="mailto:example@example.com">example@example.com</a>.</p>
+        <p>Have questions? Reach out at <a href="mailto:example@example.com" aria-label="Send an email to example@example.com">example@example.com</a>.</p>
         <p>&copy; 2023 My Static Website. All rights reserved.</p>
     </footer>
 
