@@ -23,4 +23,4 @@ jobs:
         run: aws s3 sync . s3://static-site-for-poc --delete
 
       - name: Invalidate CloudFront cache
-        run: aws cloudfront create-invalidation --distribution-id YOUR_DISTRIBUTION_ID --paths "/*"
+        run: aws cloudfront create-invalidation --distribution-id E2Y0SHI377MCZ4 --paths "/*"
